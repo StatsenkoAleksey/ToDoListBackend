@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
       end
       listOfProjects += [:id => project[:id], :title => project[:title], :todos => listOfTodos]
     end
-    render :json => { :projects => listOfProjects}
+    render :json => listOfProjects
   end
 
   
