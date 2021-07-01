@@ -15,7 +15,8 @@ module ToDoServer
       'Access-Control-Allow-Origin' => '*',
       'Access-Control-Allow-Headers' => '*',
       'Access-Control-Allow-Methods' => '*',
-      'Access-Control-Request-Method' => '*'
+      'Access-Control-Request-Method' => '*',
+      'Access-Control-Allow-Credentials' => true
     })
     
     # Configuration for the application, engines, and railties goes here.
