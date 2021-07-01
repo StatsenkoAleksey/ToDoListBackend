@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'projects/index'
   get "/projects", to: "projects#index"
-  patch "/projects/:project_id/todos/:id", to: "todos#update"
+  patch 'todos/update'
+  patch "/projects/:project_id/todos/:id", to: "todos#update"  
+  post 'todos/new'
   post "/todos", to: "todos#new"
   
   root "projects#index"
