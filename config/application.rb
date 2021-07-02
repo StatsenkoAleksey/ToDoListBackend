@@ -18,14 +18,14 @@ module ToDoServer
       end  
     end
   
-    config.action_dispatch.default_headers.merge!({
-      'Access-Control-Allow-Origin' => '*',
-      'Access-Control-Allow-Headers' => '*',
-      'Access-Control-Allow-Methods' => '*',
-      'Access-Control-Request-Method' => '*',
-      'Access-Control-Request-Headers' => '*',
-      'Access-Control-Max-Age' => 600
-    })
+    # config.action_dispatch.default_headers.merge!({
+    #   'Access-Control-Allow-Origin' => '*',
+    #   'Access-Control-Allow-Headers' => '*',
+    #   'Access-Control-Allow-Methods' => '*',
+    #   'Access-Control-Request-Method' => '*',
+    #   'Access-Control-Request-Headers' => '*',
+    #   'Access-Control-Max-Age' => 600
+    # })
     
     # Configuration for the application, engines, and railties goes here.
     #
