@@ -2,15 +2,13 @@
 
 require_relative "config/environment"
 
-require 'rack/cors'
 use Rack::Cors do
-
- allow do
-   origins '*'
-   resource '*',
+  allow do
+    origins '*'
+    resource '*',
        :headers => :any,
        :methods => [:get, :post, :options, :patch]
- end
+  end
 end
 
 run Rails.application
