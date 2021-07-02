@@ -11,14 +11,20 @@ module ToDoServer
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
   
-    config.action_dispatch.default_headers.merge!({
-      'Access-Control-Allow-Origin' => '*',
-      'Access-Control-Allow-Headers' => '*',
-      'Access-Control-Allow-Methods' => '*',
-      'Access-Control-Request-Method' => '*',
-      'Access-Control-Request-Headers' => '*',
-      'Access-Control-Max-Age' => 600
-    })
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options, :patch]
+      end
+    end
+    # config.action_dispatch.default_headers.merge!({
+    #   'Access-Control-Allow-Origin' => '*',
+    #   'Access-Control-Allow-Headers' => '*',
+    #   'Access-Control-Allow-Methods' => '*',
+    #   'Access-Control-Request-Method' => '*',
+    #   'Access-Control-Request-Headers' => '*',
+    #   'Access-Control-Max-Age' => 600
+    # })
     
     # Configuration for the application, engines, and railties goes here.
     #
