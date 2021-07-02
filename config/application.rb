@@ -16,6 +16,7 @@ module ToDoServer
       'Access-Control-Allow-Headers' => '*',
       'Access-Control-Allow-Methods' => '*',
       'Access-Control-Request-Method' => '*',
+      'Access-Control-Request-Headers' => '*',
       'Access-Control-Allow-Credentials' => true,
       'Access-Control-Max-Age' => 600
     })
